@@ -7,24 +7,33 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-    <title>Pankēki | パンケーキ</title>
+    <title>Chatty Pancake</title>
     <style type="text/css">
-        .jumbotron {
-            background-image: url('assets/drizzle-pancakes.jpg');
+        body {
+            background-image: url('assets/fat-pancakes.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             min-height: 100vh;
         }
         section {
-            padding-top: 4rem;
+            padding-top: 10rem;
+            background-color: #ffffff99;
+            /* height: 100vh; */
+        }
+        h1 {
+            text-align: center;
+        }
+        td {
+            background-color: burlywood;
+            border-radius: 50px; 
         }
     </style>
   </head>
   <body data-spy="scroll" data-target="navScrollspy">
+    <!-- NAV BAR START -->
     <nav class="navbar bg-dark navbar-dark navbar-expand-md fixed-top">
-        <a href="#" class="navbar-brand">パンケーキ</a>
+        <a href="#" class="navbar-brand"><img src="assets/pancakes-icon.png" width="30" height="30" alt="Stack of Pancakes"></a>
         <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,33 +51,92 @@
             </ul>
         </div>
     </nav>
-    <section id="top" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
-        <div class="container">
-            <h1 class="display-1">パンケーキ</h1>
-            <p class="display-4">Pankēki</p>
-            <p class="lead">Donut cake cake chocolate. Candy canes sesame snaps chocolate sweet gummies apple pie fruitcake cheesecake marzipan. Tiramisu tiramisu jelly-o icing tootsie roll. Oat cake topping chocolate cake chupa chups ice cream. Topping bear claw caramels cake fruitcake candy. Pie soufflé topping pie cake sesame snaps marshmallow. Pie chupa chups apple pie pie caramels biscuit. Biscuit cheesecake powder fruitcake candy canes caramels.</p>
-            <p class="lead">Cheesecake halvah pastry soufflé gummies chupa chups. Muffin tootsie roll tart. Pie fruitcake cheesecake dessert chocolate. Chocolate bar cake toffee. Candy canes lollipop cupcake jelly-o jelly candy canes cheesecake chocolate bar. Bear claw tiramisu jelly-o tart marzipan.</p>
-        </div>
-    </section>
+    <!-- NAV BAR END -->
+
+
     <div class="container">
-        <section id="about">
-            <h2 class="display-4">What is Pankēki?</h2>
-            <p>
-                Lollipop bonbon biscuit croissant candy canes gummies dragée pastry pie. Danish candy canes muffin halvah cake biscuit pudding. Brownie cake oat cake marzipan soufflé croissant. Fruitcake jujubes powder cheesecake croissant chocolate bar tiramisu cotton candy. Chocolate cake dessert sweet bear claw jelly beans bonbon jelly-o. Sweet jelly beans jelly beans. Sweet roll marzipan jujubes sugar plum gingerbread icing. Tootsie roll cake candy sugar plum.
-            </p>
-            <p>
-                Sweet roll brownie chocolate. Topping chocolate cake gummi bears lollipop tiramisu gummies topping chupa chups cupcake. Dessert jelly beans cotton candy jelly-o carrot cake danish tart icing. Candy canes marshmallow candy canes lollipop toffee cake jujubes candy. Jelly-o chocolate cake halvah jelly beans sugar plum dragée lollipop. Oat cake gingerbread topping cake oat cake. Gummi bears bonbon lemon drops.
-            </p>
-        </section>
-        <section id="contact">
-            <h2 class="display-4">Contact</h2>
-            <p>
-                Lollipop bonbon biscuit croissant candy canes gummies dragée pastry pie. Danish candy canes muffin halvah cake biscuit pudding. Brownie cake oat cake marzipan soufflé croissant. Fruitcake jujubes powder cheesecake croissant chocolate bar tiramisu cotton candy. Chocolate cake dessert sweet bear claw jelly beans bonbon jelly-o. Sweet jelly beans jelly beans. Sweet roll marzipan jujubes sugar plum gingerbread icing. Tootsie roll cake candy sugar plum.
-            </p>
-            <p>
-                Sweet roll brownie chocolate. Topping chocolate cake gummi bears lollipop tiramisu gummies topping chupa chups cupcake. Dessert jelly beans cotton candy jelly-o carrot cake danish tart icing. Candy canes marshmallow candy canes lollipop toffee cake jujubes candy. Jelly-o chocolate cake halvah jelly beans sugar plum dragée lollipop. Oat cake gingerbread topping cake oat cake. Gummi bears bonbon lemon drops.
-            </p>
-        </section>
+        <div class="row justify-content-md-center">
+            <section id="pancake-stack" class="col-lg-4">
+                <h1>PANCAKE</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="Message">Send a Message</label>
+                        <input type="text" class="form-control" name="message" id="message" placeholder="Pour fat pancake here...">
+                        <small class="form-text text-muted">Please be kind to your fellow pancake lovers.</small>
+                    </div>
+
+                    <div class="form-check form-group">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I am not a robot</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn1">Stack Yo' Pancake</button>
+                </form>
+            </section>
+            <section id="create-pancake" class="col-lg-8">
+                <h1>PLATE</h1>
+                <table class="table">
+                    <tbody>
+                        <tr>
+
+                        <th>Adam</th>
+                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Cesca</th>
+                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Holder</th>
+                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
+                        </tr>
+
+                        <th>Creepy Tree</th>
+                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Cardi B</th>
+                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Lil Sheht</th>
+                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
+                        </tr>
+
+                        <th>Pikachu</th>
+                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Pumpkin</th>
+                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Chocolate</th>
+                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
+                        </tr>
+
+                        <th>Ohitsmunstar</th>
+                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Juicyboogers</th>
+                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
+                        </tr>
+                        <tr>
+
+                        <th>Finn</th>
+                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -76,5 +144,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+    </body>
 </html>
