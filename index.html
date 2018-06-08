@@ -28,6 +28,9 @@
             background-color: burlywood;
             border-radius: 50px; 
         }
+        .btn {
+            margin: 5px 0px 5px 0px;
+        }
     </style>
   </head>
   <body data-spy="scroll" data-target="navScrollspy">
@@ -56,22 +59,43 @@
 
     <div class="container">
         <div class="row justify-content-md-center">
+
+
+
             <section id="pancake-stack" class="col-lg-4">
                 <h1>PANCAKE</h1>
                 <form onSubmit="return false;">
+                    <!-- USERNAME -->
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name...">
+                    </div>
+
+                    <!-- SEND A MESSAGE -->
                     <div class="form-group">
                         <label for="Message">Send a Message</label>
                         <input type="text" class="form-control" name="message" id="message" placeholder="Pour fat pancake here...">
                         <small class="form-text text-muted">Please be kind to your fellow pancake lovers.</small>
                     </div>
 
-                    <div class="form-check form-group">
+                    <!-- CHECKBOX -->
+                    <!-- <div class="form-check form-group">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">I am not a robot</label>
+                    </div> -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="postPancake">Stack Yo' Pancake</button>
+                        <button type="submit" class="btn btn-primary" id="getPancakes">Request Pancakes</button>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="btn1">Stack Yo' Pancake</button>
+                    <div>
+                        <!-- <button type="submit" class="btn btn-primary" id="btn1">Request Pancakes</button> -->
+                    </div>
+                    
                 </form>
             </section>
+
+
+
             <section id="create-pancake" class="col-lg-8">
                 <h1>PLATE</h1>
                 <table class="table">
