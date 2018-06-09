@@ -65,16 +65,22 @@
             <section id="pancake-stack" class="col-lg-4">
                 <h1>PANCAKE</h1>
                 <form onSubmit="return false;">
+                    <!-- XID -->
+                    <div class="form-group">
+                        <label for="xid">ID</label>
+                        <input type="number" class="form-control" name="xid" id="xid" value="0">
+                    </div>
+
                     <!-- USERNAME -->
                     <div class="form-group">
                         <label for="Name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name...">
+                        <input type="text" class="form-control" name="name" id="name" value="Holder" placeholder="Your Name...">
                     </div>
 
                     <!-- SEND A MESSAGE -->
                     <div class="form-group">
                         <label for="Message">Send a Message</label>
-                        <input type="text" class="form-control" name="message" id="message" placeholder="Pour fat pancake here...">
+                        <input type="text" class="form-control" name="message" id="message" value="Wants more coconut milk tea" placeholder="Pour fat pancake here...">
                         <small class="form-text text-muted">Please be kind to your fellow pancake lovers.</small>
                     </div>
 
@@ -83,12 +89,13 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">I am not a robot</label>
                     </div> -->
+
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="postPancake">Stack Yo' Pancake</button>
-                        <button type="submit" class="btn btn-primary" id="getPancakes">Request Pancakes</button>
+                        <button type="submit" class="btn btn-primary" id="postData">POST DATA</button>
+                        <button type="submit" class="btn btn-primary" id="getData">GET DATA</button>
                     </div>
-                    <div>
-                        <!-- <button type="submit" class="btn btn-primary" id="btn1">Request Pancakes</button> -->
+                    <div id="output">
+                        
                     </div>
                     
                 </form>
@@ -103,7 +110,8 @@
                         <tr>
 
                         <th>Adam</th>
-                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
+                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. 
+                        </td>
                         </tr>
                         <tr>
 
