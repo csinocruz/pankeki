@@ -42,8 +42,8 @@ if($arr['action'] === 'ADD') {
 } // ----- end of ADD if statement
 
 if($arr['action'] === 'GET') {
-    $sqla = $connection->prepare("SELECT * FROM `pancakes` WHERE xid=?");
-    $requestsqla = $sqla->bind_param('i', $arr['xid']);
+    $sqla = $connection->prepare("SELECT * FROM `pancakes` LIMIT 10");
+    //$requestsqla = $sqla->bind_param('i', $arr['xid']);
     $sqla->execute();
     $result = $sqla->get_result();
     $data = [];

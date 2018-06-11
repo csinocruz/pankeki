@@ -3,8 +3,6 @@ $(document).ready(function() {
 
     // POST DATA BUTTON
     $('#postData').on('click', function() {
-        console.log('POST data clicked');
-
         var vars = {
             xid: $('#xid').val(),
             name: $('#name').val(),
@@ -30,8 +28,6 @@ $(document).ready(function() {
 
     // GET DATA BUTTON
     $('#getData').on('click', function() {
-        console.log('GET data clicked');
-
         var vars = {
             xid: $('#xid').val(),
             action: 'GET'
@@ -43,17 +39,13 @@ $(document).ready(function() {
             dataType:'json'
         })
         .done(function(result) {
-            console.log(result.response[0].name);
-            // <tr>
-            //     <th>Ailpein</th>
-            //     <td>Powder dragée candy canes cookie sweet roll. 
-            //     </td>
-            // </tr>
+            for (i=0; i<result.response.length; i++) {
+                var $th = $('<th>').text(result.response[i].name);
+                var $td = $('<td>').text(result.response[i].message);
+                var $row = $('<tr>').append($th,$td);
+                $('tbody').append($row);
+            }
 
-            var $th = $('<th>').text(result.response[0].name);
-            var $td = $('<td>').text(result.response[0].message);
-            var $row = $('<tr>').append($th,$td);
-            $('tbody').append($row);
         })
         .fail(function(xhr,textstatus) {
             console.log(xhr);
