@@ -38,7 +38,8 @@ $(document).ready(function() {
         }
         $.ajax({
             url:'api.php',
-            type:'POST',
+            data: vars,
+            type:'GET',
             dataType:'json'
         })
         .done(function(result) {
