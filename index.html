@@ -32,6 +32,7 @@
             margin: 5px 0px 5px 0px;
         }
     </style>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body data-spy="scroll" data-target="navScrollspy">
     <!-- NAV BAR START -->
@@ -62,8 +63,8 @@
 
 
 
-            <section id="pancake-stack" class="col-lg-4">
-                <h1>PANCAKE</h1>
+            <section id="messages" class="col-lg-3">
+                <h1>Create a Post</h1>
                 <form onSubmit="return false;">
                     <!-- XID -->
                     <div class="form-group">
@@ -74,21 +75,27 @@
                     <!-- USERNAME -->
                     <div class="form-group">
                         <label for="Name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" value="Holder" placeholder="Your Name...">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name...">
                     </div>
 
                     <!-- SEND A MESSAGE -->
                     <div class="form-group">
                         <label for="Message">Send a Message</label>
-                        <input type="text" class="form-control" name="message" id="message" value="Wants more coconut milk tea" placeholder="Pour fat pancake here...">
-                        <small class="form-text text-muted">Please be kind to your fellow pancake lovers.</small>
+                        <input type="text" class="form-control" name="message" id="message" placeholder="Your Message...">
                     </div>
 
-                    <!-- CHECKBOX -->
-                    <!-- <div class="form-check form-group">
+                    <!-- VERIFY USER IS NOT A ROBOT -->
+                    <!-- option A -->
+                    <!-- <div class="form-check form-group ">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">I am not a robot</label>
                     </div> -->
+                    <!-- option B -->
+                    <!-- <form action="?" method="POST">
+                        <br/>
+                        <input type="submit" value="Submit">
+                        <div class="g-recaptcha" data-sitekey="6LdKeV4UAAAAAJ4coXeunHLfUk6oJm5lzGkyxUVJ"></div>
+                    </form> -->
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary" id="postData">POST DATA</button>
@@ -103,67 +110,20 @@
 
 
 
-            <section id="create-pancake" class="col-lg-8">
-                <h1>PLATE</h1>
+            <section id="create-post" class="col-lg-7">
+                <h1>All Messages</h1>
                 <table class="table">
                     <tbody>
                         <tr>
-
-                        <th>Adam</th>
-                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. 
-                        </td>
+                            <th>Ailpein</th>
+                            <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. 
+                            </td>
                         </tr>
+
                         <tr>
-
-                        <th>Cesca</th>
-                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Holder</th>
-                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
-                        </tr>
-
-                        <th>Creepy Tree</th>
-                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Cardi B</th>
-                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Lil Sheht</th>
-                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
-                        </tr>
-
-                        <th>Pikachu</th>
-                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Pumpkin</th>
-                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Chocolate</th>
-                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
-                        </tr>
-
-                        <th>Ohitsmunstar</th>
-                        <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Juicyboogers</th>
-                        <td>I love marshmallow gummies chupa chups halvah candy wafer soufflé chocolate. </td>
-                        </tr>
-                        <tr>
-
-                        <th>Finn</th>
-                        <td>Cupcake gingerbread croissant I love fruitcake dessert gummi bears. </td>
+                            <th>Eligio</th>
+                            <td>Powder dragée candy canes cookie sweet roll chocolate cake sesame snaps dragée I love. 
+                            </td>
                         </tr>
                     </tbody>
                 </table>
