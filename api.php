@@ -9,21 +9,20 @@ if($connection->ping()) {
     $arr['connected'] = false;
 }
 
+// $_SERVER['REQUEST_METHOD']  Returns the request method used to access the page (such as POST)
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $arr['xid'] = $_POST['xid'];
     $arr['name'] = $_POST['name'];
     $arr['message'] = $_POST['message'];
     $arr['action'] = $_POST['action'];
-} else {
-    $arr['xid'] = '222';
-    $arr['name'] = $_POST['noname'];
-    $arr['message'] = $_POST['nomessage'];
-    $arr['action'] = 'GET';
-}
+} 
 
-if (preg_match('/^[0-9]+$/', $arr['xid'])) {
+if($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $arr['xid'] = $_GET['xid'];
+    $arr['action'] = $_GET['action'];
+} 
 
-}
+
 
 if($arr['action'] === 'ADD') {
     $sqla = $connection->prepare("SELECT xid FROM `pancakes` WHERE xid=?");
@@ -40,24 +39,22 @@ if($arr['action'] === 'ADD') {
         $requestsqlb = $sqlb->bind_param('ssi', $arr['name'], $arr['message'], $arr['xid']);
         if($requestsqlb) { $sqlb->execute(); $arr['status'] = 'Updated';}
     }
+} // ----- end of ADD if statement
 
 if($arr['action'] === 'GET') {
-    $sqla = $connection->prepare("SELECT xid FROM `pancakes` WHERE xid=?");
+    $sqla = $connection->prepare("SELECT * FROM `pancakes` WHERE xid=?");
     $requestsqla = $sqla->bind_param('i', $arr['xid']);
     $sqla->execute();
     $result = $sqla->get_result();
     $data = [];
-    if($result->num_row > 0) {
+    if($result->num_rows > 0) {
         while($row=$result->fetch_assoc()) {
             $data[] = $row;
         }
         $arr['response'] = $data;
     }
 
-}
-
-
-} // ----- end of if statement
+} // end of GET if statement 
 
 echo json_encode($arr);
 
