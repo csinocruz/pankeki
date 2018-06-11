@@ -43,7 +43,17 @@ $(document).ready(function() {
             dataType:'json'
         })
         .done(function(result) {
-            console.log(result);
+            console.log(result.response[0].name);
+            // <tr>
+            //     <th>Ailpein</th>
+            //     <td>Powder dragée candy canes cookie sweet roll. 
+            //     </td>
+            // </tr>
+
+            var $th = $('<th>').text(result.response[0].name);
+            var $td = $('<td>').text(result.response[0].message);
+            var $row = $('<tr>').append($th,$td);
+            $('tbody').append($row);
         })
         .fail(function(xhr,textstatus) {
             console.log(xhr);
